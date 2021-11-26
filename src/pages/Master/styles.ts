@@ -14,6 +14,14 @@ export const Container = styled.main<Props>`
   height: 100vh;
   align-items: center;
   position: relative;
+  padding: 0 1rem;
+
+  @media only screen and (max-width: 800px) {
+    & > :nth-child(1) { order: 1; }
+    & > :nth-child(2) { order: 4; }
+    & > :nth-child(3) { order: 2; }
+    & > :nth-child(4) { order: 3; }
+  }
 `;
 
 export const Button = styled.button<Props>`
@@ -28,6 +36,10 @@ export const Button = styled.button<Props>`
   font-size: 16px;
   line-height: 20px;
   margin-top: 175px;
+
+  @media only screen and (max-width: 800px) {
+    margin-top: 38px;
+  }
 `;
 
 export const ImageContainer = styled.div<Props>`
@@ -37,17 +49,33 @@ export const ImageContainer = styled.div<Props>`
   ${props => props.master === 'Darth Vader' ? '#fff;' : '#2a2a2a'};
   background: url(${props => props.master === 'Darth Vader' ? darthVader : lukeSkywalker});
   margin-top: 91px;
+
+  @media only screen and (max-width: 800px) {
+    margin-top: 210px;
+  }
 `;
 
-export const MasterInfo = styled.p<Props>`
+export const MasterInfoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 38px;
+
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+`;
+
+export const MasterInfoText = styled.p<Props>`
   font-size: 36px;
   line-height: 44px;
   color: ${props => props.master === 'Darth Vader' ? '#fff;' : '#2a2a2a'};
-  margin-top: 38px;
+`;
 
-  span {
-    font-weight: bold;
-  }
+export const MasterInfoName = styled.span<Props>`
+  font-size: 36px;
+  line-height: 44px;
+  color: ${props => props.master === 'Darth Vader' ? '#fff;' : '#2a2a2a'};
+  font-weight: bold;
 `;
 
 export const ReturnContainer = styled.div<Props>`
