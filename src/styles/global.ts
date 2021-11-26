@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   button[disabled] {
-    opacity: 0.8;
+    opacity: 0.5;
     cursor: not-allowed;
   }
 `;
