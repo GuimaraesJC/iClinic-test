@@ -13,7 +13,18 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  a, button {
+  button {
     cursor: pointer;
+
+    transition: filter 0.2s;
+
+    &:hover:not([disabled]) {
+      filter: brightness(0.9);
+    }
+  }
+
+  button[disabled] {
+    opacity: 0.8;
+    cursor: not-allowed;
   }
 `;

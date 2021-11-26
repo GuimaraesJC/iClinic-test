@@ -3,47 +3,46 @@ import styled from 'styled-components';
 import darthVader from '../../assets/images/darth-vader.png';
 import lukeSkywalker from '../../assets/images/luke-skywalker.png';
 
-export const Container = styled.main`
+type Props = {
+  master: string
+}
+
+export const Container = styled.main<Props>`
   display: flex;
   flex-direction: column;
-  background-color: #2b2b2b;
+  background-color: ${props => props.master === 'Darth Vader' ? '#2b2b2b' : '#fbfe63'};
   height: 100vh;
   align-items: center;
   position: relative;
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<Props>`
   width: 347px;
   height: 56px;
-  background: #fff;
+  background: ${props => props.master === 'Darth Vader' ? '#fff' : '#2a2a2a'};
   border: none;
   border-radius: 10px;
-  color: #2a2a2a;
+  color: ${props => props.master === 'Darth Vader' ? '#2a2a2a' : '#fbfe63'};
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
   margin-top: 175px;
-
-  transition: filter 0.2s;
-
-  &:hover {
-    filter: brightness(0.9);
-  }
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.div<Props>`
   width: 380px;
   height: 380px;
   border-radius: 50%;
-  background: url(${darthVader});
+  ${props => props.master === 'Darth Vader' ? '#fff;' : '#2a2a2a'};
+  background: url(${props => props.master === 'Darth Vader' ? darthVader : lukeSkywalker});
   margin-top: 91px;
 `;
 
-export const MasterInfo = styled.p`
+export const MasterInfo = styled.p<Props>`
   font-size: 36px;
   line-height: 44px;
-  color: #fff;
+  color: ${props => props.master === 'Darth Vader' ? '#fff;' : '#2a2a2a'};
   margin-top: 38px;
 
   span {
@@ -51,10 +50,10 @@ export const MasterInfo = styled.p`
   }
 `;
 
-export const ReturnContainer = styled.div`
+export const ReturnContainer = styled.div<Props>`
   display: flex;
   align-items: center;
-  color: #fff;
+  color: ${props => props.master === 'Darth Vader' ? '#fff;' : '#2a2a2a'};
   position: absolute;
   top: 45px;
   left: 52px;

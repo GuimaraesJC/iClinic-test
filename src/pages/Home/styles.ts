@@ -46,10 +46,4 @@ export const Button = styled.button`
   letter-spacing: 0.35em;
   text-transform: uppercase;
   margin-top: 162px;
-
-  transition: filter 0.2s;
-
-  &:hover {
-    filter: brightness(0.9);
-  }
 `;
