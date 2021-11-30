@@ -3,6 +3,9 @@ import * as S from './styles';
 type ButtonProps = {
   label: string;
   size: string;
+  font: string;
+  disabled: boolean;
+  onClickFn?: () => void;
 }
 
 type ButtonSizeOptions = {
@@ -14,9 +17,15 @@ const buttonSize: ButtonSizeOptions = {
   'large': 347
 }
 
-function Button({ label, size }: ButtonProps) {
+
+function Button({ label, size, font, disabled, onClickFn }: ButtonProps) {
   return (
-    <S.DefaultButton buttonWidth={buttonSize[size]}>
+    <S.DefaultButton
+      buttonWidth={buttonSize[size]}
+      font={font}
+      disabled={disabled}
+      onClick={onClickFn}
+    >
       {label}
     </S.DefaultButton>
   );

@@ -1,7 +1,26 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 type ButtonProps = {
   buttonWidth: number;
+  font: string
+}
+
+type FontStyleOptions = {
+  [key: string]: {
+    fontSize: number;
+    lineHeight: number;
+  };
+}
+
+const fontStyle: FontStyleOptions = {
+  'normal': {
+    fontSize: 16,
+    lineHeight: 20,
+  },
+  'large': {
+    fontSize: 18,
+    lineHeight: 22,
+  }
 }
 
 export const DefaultButton = styled.button<ButtonProps>`
@@ -12,27 +31,8 @@ export const DefaultButton = styled.button<ButtonProps>`
   border-radius: 10px;
   color: #fff;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: ${props => fontStyle[props.font].fontSize}px;
+  line-height: ${props => fontStyle[props.font].lineHeight}px;
   letter-spacing: 0.35em;
   text-transform: uppercase;
 `;
-
-
-// export const Button = styled.button<Props>`
-//   width: 347px;
-//   height: 56px;
-//   background: ${props => props.master === 'Darth Vader' ? '#fff' : '#2a2a2a'};
-//   border: none;
-//   border-radius: 10px;
-//   color: ${props => props.master === 'Darth Vader' ? '#2a2a2a' : '#fbfe63'};
-//   font-style: normal;
-//   font-weight: bold;
-//   font-size: 16px;
-//   line-height: 20px;
-//   margin-top: 175px;
-
-//   @media only screen and (max-width: 800px) {
-//     margin-top: 38px;
-//   }
-// `;
