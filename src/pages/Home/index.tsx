@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import Button from '../../components/Button';
+
 import * as S from './styles';
 
 function Home() {
@@ -9,7 +11,7 @@ function Home() {
       <S.Subtitle>Frontend challenge - by <span>Jean Carlos Guimarães</span></S.Subtitle>
 
       <Link to="/master">
-        <S.Button>Start</S.Button>
+        <Button label="Start" size="small" />
       </Link>
     </S.Container>
   );

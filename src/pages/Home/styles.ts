@@ -27,23 +27,9 @@ export const Subtitle = styled.h2`
   line-height: 17px;
   letter-spacing: 0.35em;
   text-transform: uppercase;
+  margin-bottom: 162px;
 
   span {
     font-weight: bold;
   }
-`;
-
-export const Button = styled.button`
-  width: 189px;
-  height: 56px;
-  background: #2c97d1;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  margin-top: 162px;
 `;
