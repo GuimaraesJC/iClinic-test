@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+import Button from 'components/Button';
+
 import { fetchMasters } from 'utils/api';
 
 import * as S from './styles';
@@ -40,14 +42,16 @@ function Master() {
         </S.ReturnContainer>
       </Link>
 
-      <S.StyledButton
-        label="choose your path again, Padawan"
-        size="large"
-        font="normal"
-        master={masterName}
-        disabled={isLoading}
-        onClickFn={handleClick}
-      />
+      <S.ButtonContainer>
+        <Button
+          label="choose your path again, Padawan"
+          size="large"
+          font="normal"
+          master={masterName}
+          disabled={isLoading}
+          onClickFn={handleClick}
+        />
+      </S.ButtonContainer>
       <S.ImageContainer master={masterName}></S.ImageContainer>
 
       <S.MasterInfoContainer>

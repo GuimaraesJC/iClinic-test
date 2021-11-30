@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import Button from 'components/Button';
-
 import darthVader from 'assets/images/darth-vader.png';
 import lukeSkywalker from 'assets/images/luke-skywalker.png';
 
@@ -26,8 +24,12 @@ export const Container = styled.main<Props>`
   }
 `;
 
-export const StyledButton = styled(Button)`
-  margin-top: 50px;
+export const ButtonContainer = styled.div`
+  margin-top: 175px;
+
+  @media only screen and (max-width: 800px) {
+    margin-top: 50px;
+  }
 `;
 
 export const ImageContainer = styled.div<Props>`
