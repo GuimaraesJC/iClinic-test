@@ -11,7 +11,7 @@ function Home() {
       <S.Subtitle>Frontend challenge - by <span>Jean Carlos Guimarães</span></S.Subtitle>
 
       <Link to="/master">
-        <Button label="Start" size="small" font="large" disabled={false} />
+        <Button label="START" size="small" font="large" disabled={false} />
       </Link>
     </S.Container>
   );

@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 type ButtonProps = {
   buttonWidth: number;
-  font: string
+  font: string;
+  label: string;
+  master?: string;
 }
 
 type FontStyleOptions = {
@@ -23,16 +25,38 @@ const fontStyle: FontStyleOptions = {
   }
 }
 
+type ButtonStyle = {
+  backgroundColor: string;
+  color: string;
+}
+
+function getButtonStyle(master: string): ButtonStyle {
+  if (!master) {
+    return {
+      backgroundColor: '#2c97d1',
+      color: '#fff',
+    };
+  }
+
+  return master === 'Darth Vader' ? {
+    backgroundColor: '#fff',
+    color: '#2a2a2a'
+  } : {
+    backgroundColor: '#2a2a2a',
+    color: '#fbfe63'
+  };
+}
+
+
 export const DefaultButton = styled.button<ButtonProps>`
   width: ${props => props.buttonWidth}px;
   height: 56px;
-  background: #2c97d1;
+  background: ${props => getButtonStyle(props.master || '').backgroundColor};
   border: none;
   border-radius: 10px;
-  color: #fff;
+  color: ${props => getButtonStyle(props.master || '').color};
   font-weight: bold;
   font-size: ${props => fontStyle[props.font].fontSize}px;
   line-height: ${props => fontStyle[props.font].lineHeight}px;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
+  letter-spacing: ${props => props.label.match(/start/i) && '0.35em'};
 `;

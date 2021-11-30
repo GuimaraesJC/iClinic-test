@@ -4,6 +4,7 @@ type ButtonProps = {
   label: string;
   size: string;
   font: string;
+  master?: string;
   disabled: boolean;
   onClickFn?: () => void;
 }
@@ -18,11 +19,13 @@ const buttonSize: ButtonSizeOptions = {
 }
 
 
-function Button({ label, size, font, disabled, onClickFn }: ButtonProps) {
+function Button({ label, size, font, master, disabled, onClickFn }: ButtonProps) {
   return (
     <S.DefaultButton
       buttonWidth={buttonSize[size]}
       font={font}
+      label={label}
+      master={master}
       disabled={disabled}
       onClick={onClickFn}
     >

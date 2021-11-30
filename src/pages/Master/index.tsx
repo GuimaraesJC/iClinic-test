@@ -44,6 +44,7 @@ function Master() {
         label="choose your path again, Padawan"
         size="large"
         font="normal"
+        master={masterName}
         disabled={isLoading}
         onClickFn={handleClick}
       />
