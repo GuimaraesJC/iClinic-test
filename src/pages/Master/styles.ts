@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import Button from '../../components/Button';
+import Button from 'components/Button';
 
-import darthVader from '../../assets/images/darth-vader.png';
-import lukeSkywalker from '../../assets/images/luke-skywalker.png';
+import darthVader from 'assets/images/darth-vader.png';
+import lukeSkywalker from 'assets/images/luke-skywalker.png';
 
 type Props = {
   master: string

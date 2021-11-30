@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import Button from '../../components/Button';
+import Button from 'components/Button';
 
-import { fetchMasters } from '../../utils/api';
+import { fetchMasters } from 'utils/api';
 
 import * as S from './styles';
 
-import arrowLeft from '../../assets/icons/arrow-left.svg';
+import arrowLeft from 'assets/icons/arrow-left.svg';
 
 
 function Master() {
