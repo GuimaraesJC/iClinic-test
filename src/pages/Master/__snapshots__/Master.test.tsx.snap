@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Master /> should match the snapshot 1`] = `
+.c3 {
+  width: 347px;
+  height: 56px;
+  background: #2c97d1;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fbfe63;
+  height: 100vh;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.c2 {
+  margin-top: 175px;
+}
+
+.c4 {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: url(luke-skywalker.png);
+  margin-top: 91px;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 38px;
+}
+
+.c6 {
+  font-size: 36px;
+  line-height: 44px;
+  color: #2a2a2a;
+}
+
+.c7 {
+  font-size: 36px;
+  line-height: 44px;
+  color: #2a2a2a;
+  font-weight: bold;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #2a2a2a;
+  position: absolute;
+  top: 45px;
+  left: 52px;
+  -webkit-transition: filter 0.2s;
+  transition: filter 0.2s;
+}
+
+.c1 img {
+  width: 30px;
+  height: 25px;
+}
+
+.c1 span {
+  font-size: 18px;
+  line-height: 22px;
+  margin-left: 10px;
+}
+
+.c1:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+@media only screen and (max-width:800px) {
+  .c0 > :nth-child(1) {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .c0 > :nth-child(2) {
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+  }
+
+  .c0 > :nth-child(3) {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .c0 > :nth-child(4) {
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .c2 {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .c4 {
+    margin-top: 210px;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .c5 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+<div>
+  <main
+    class="c0"
+  >
+    <a
+      href="/"
+    >
+      <div
+        class="c1"
+      >
+        <img
+          alt="Back"
+          src="arrow-left.svg"
+        />
+        <span>
+          back
+        </span>
+      </div>
+    </a>
+    <div
+      class="c2"
+    >
+      <button
+        class="c3"
+        disabled=""
+        label="choose your path again, Padawan"
+      >
+        choose your path again, Padawan
+      </button>
+    </div>
+    <div
+      class="c4"
+      data-testid="img-container"
+    />
+    <div
+      class="c5"
+    >
+      <p
+        class="c6"
+      >
+        Your master is 
+      </p>
+      <span
+        class="c7"
+      />
+    </div>
+  </main>
+</div>
+`;

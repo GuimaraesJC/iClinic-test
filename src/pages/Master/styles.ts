@@ -36,7 +36,6 @@ export const ImageContainer = styled.div<Props>`
   width: 380px;
   height: 380px;
   border-radius: 50%;
-  ${props => props.master === 'Darth Vader' ? '#fff;' : '#2a2a2a'};
   background: url(${props => props.master === 'Darth Vader' ? darthVader : lukeSkywalker});
   margin-top: 91px;
 

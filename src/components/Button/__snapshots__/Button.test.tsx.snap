@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should match the snapshot 1`] = `
+.c0 {
+  width: 347px;
+  height: 56px;
+  background: #2c97d1;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+<div>
+  <button
+    class="c0"
+    label="default label"
+  >
+    default label
+  </button>
+</div>
+`;

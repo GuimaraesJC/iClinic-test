@@ -52,7 +52,7 @@ function Master() {
           onClickFn={handleClick}
         />
       </S.ButtonContainer>
-      <S.ImageContainer master={masterName}></S.ImageContainer>
+      <S.ImageContainer master={masterName} data-testid="img-container"></S.ImageContainer>
 
       <S.MasterInfoContainer>
         <S.MasterInfoText master={masterName}>Your master is&nbsp;</S.MasterInfoText>
