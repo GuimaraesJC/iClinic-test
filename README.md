@@ -6,7 +6,7 @@ It also should be responsive for screens smaller than 800px.
 
 ## Setup
 
-After clone the project, go to the root folder and run `yarn`. All dependencies will be installed. Once it is done, run `yarn start` and the project will automatically open in your browser, running on `http://localhost:3000`.
+After cloning the project, go to the root folder and run `yarn`. All dependencies will be installed. Once it is done, run `yarn start` and the project will automatically open in your browser, running on `http://localhost:3000`.
 
 It is also available on [https://iclinic-test-jean.netlify.app/](https://iclinic-test-jean.netlify.app/).
 
