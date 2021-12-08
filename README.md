@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# Jean Carlos Guimarães - iClinic Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The challenge was to make two concurrent request when a button is clicked. SWAPI endpoints return either "Darth Vader" or "Luke Skywalker" data. Based on which request returns data first, it should show which side of "the Force" you are on.
 
-## Available Scripts
+It also should be responsive for screens smaller than 800px.
 
-In the project directory, you can run:
+## Setup
 
-### `yarn start`
+After clone the project, go to the root folder and run `yarn`. All dependencies will be installed. Once it is done, run `yarn start` and the project will automatically open in your browser, running on `http://localhost:3000`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+It is also available on [https://iclinic-test-jean.netlify.app/](https://iclinic-test-jean.netlify.app/).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Techs
 
-### `yarn test`
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the TypeScript template.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- For CSS, Styled Components was the choice.
 
-### `yarn build`
+- For tests, Jest and React Testing Library.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Folder and Files Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For organization, the two main folders inside `src` are `components` and `pages`. Each component or page folder contains:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- index.tsx (Template and Logic)
+- styles.ts (Styled Components)
+- [Component/Page].test.tsx (Containing all tests related to it)
 
-### `yarn eject`
+Inside `src/styles`, there's `global.ts`, which contains a simple CSS reset and default behaviors, like the hover effect for buttons and anchors.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Inside `src/utils`, there's `api.ts`, which contains the concurrent API call that returns data in JSON format. It has been separated because it is called at different places on the same page, so it helps not to repeat code unnecessarily.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The folder `src/assets` contains all images and icons used in the project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The router file (`routes.tsx`) is directly placed in `src`, and has a simple path system that switches between the pages in `src/pages`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Tests
 
-## Learn More
+The main objective of the tests in this project was to show the use and knowledge of the different methods available on Jest and RTL, such as:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- render()
+- toHaveStyle()
+- toContainHTML()
+- toBeInTheDocument()
+- getByText()
+- toMatchSnapshot()
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In `src/setupTests.ts`, there's an import of 'jest-styled-components'. The main purpose of this on this project is the visualization of styles on snapshots, which were made using Styled Components.
+
+You can launch the test runner in the interactive watch mode using `yarn test`.
